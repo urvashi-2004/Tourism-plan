@@ -22,10 +22,9 @@ body {
 }
 
 .title {
-  border: 7px dashed #0111a0;
   border-radius: 20px;
   font-size: 3rem;
-  margin: 6vh;
+  margin: 2vh;
   padding: 1vh 5vw;
 }
 
@@ -48,37 +47,33 @@ body {
   border-radius: 10px;
   align-items: center;
   justify-content: center;
+  
 }
 
-.cityImage {
+.image {
   width: 380px;
   aspect-ratio: 1/1;
   object-fit: cover;
 }
 
-.tourInfo {
+.tour-info {
   margin: 20px 5px;
 }
 
-.tourPrice {
+.price {
   color: #1faa59;
   font-size: 1.3rem;
 }
 
-.tourPrice::before {
+.price::before {
   content: "₹ ";
 }
 
-.tourCityName {
+.name {
   font-size: 1.5rem;
 }
 
-.readMore {
-  color: #12b0e2;
-  cursor: pointer;
-}
-
-.notIntrestedBtn {
+.notIntrested {
   color: black;
   border-radius: 10px;
   background-color: #b4161b21;
@@ -92,7 +87,7 @@ body {
   transition: all 0.4s;
 }
 
-.notIntrestedBtn:hover {
+.notIntrested:hover {
   background-color: red;
   color: white;
 }
@@ -108,7 +103,6 @@ body {
 .refresh h2 {
   font-size: 1.5rem;
   font-weight: bold;
-  text-transform: capitalize;
 }
 
 .refreshBtn {
@@ -116,4 +110,7 @@ body {
   cursor: pointer;
   margin-top: 18px;
   padding: 10px 80px;
+  background-color: red;
+  color: white;
+  font-size: 20px;
 }

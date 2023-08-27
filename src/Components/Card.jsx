@@ -1,25 +1,24 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-const Card = (props) => {
-    const [readmore, setReadmore] = useState(false)
 
-    let description = readmore ? props.tour.info : `${props.tour.info.substring(0, 200)}....`;
+function Card(props){
+
     return (
-        <div className="card">
-            <img className='cityImage' src={props.tour.image} alt="cityImage" />
-            <div className="tourInfo">
-                <div className="tourDetails">
-                    <h4 className="tourPrice">{props.tour.price}</h4>
-                    <h4 className="tourCityName">{props.tour.name}</h4>
-                </div>
-                <div className="description">
-                    {description}
-                    <span className='readMore' onClick={() => { setReadmore(!readmore) }}>
-                        {readmore ? " Show Less" : " Read More"}
-                    </span>
-                </div>
+        <div className='card'>
+            <img src={props.tour.image} alt="card" className='image'/>
+        <div className='tour-info'>
+            <div className='tour-details'>
+                <h4 className='price'>{props.tour.price}</h4>
+                <h4 className='name'>{props.tour.name}</h4>
             </div>
-            <button className='notIntrestedBtn' onClick={() => props.getRemoveId(props.tour.id)}>Not Intrested</button>
+            <div className='description'>
+                {props.tour.info}
+            </div>
+        </div>
+
+        <button className='notIntrested' onClick={() => props.getRemoveId(props.tour.id)}>Not Intrested</button>
+
+        
         </div>
     )
 }

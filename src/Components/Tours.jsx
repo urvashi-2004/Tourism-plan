@@ -6,11 +6,10 @@ const Tours = (props) => {
     {
         props.removeTour(id);
     }
-
     return (
         <div className='container'>
             <div>
-                <h2 className="title">Plan With Love</h2>
+                <h2 className="title">Tourism Plan</h2>
             </div>
 
             <div className="cardsContainer">
